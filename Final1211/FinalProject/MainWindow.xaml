@@ -20,12 +20,16 @@
                     <BitmapImage UriSource="/Images/Grublinpic.jpg"></BitmapImage>
                 </Image.Source>
             </Image>
-            <TextBlock Name="EncounterText" Visibility="Hidden" Background="White"  Canvas.Left="217" Canvas.Top="273" Width="132"></TextBlock>
+            <Button Name="ContinueButton"  Visibility="Hidden" Width="525" Height="289" Background="Transparent" Foreground="White" Click="ContinueButton_Click">Click The Screen</Button>
+            <TextBlock Name="ItemGrabbed"  Visibility="Hidden" Background="White" Width="232" Canvas.Left="142" Canvas.Top="40" Height="30"></TextBlock>
+            <TextBlock Name="PlayerHealthText" Visibility="Hidden" Background="White" Width="85" Canvas.Left="57" Canvas.Top="273" Height="16">PlayerHealth</TextBlock>
+            <TextBlock Name="MonsterHealth" Visibility="Hidden" Background="White" Height="50" Width="85" Canvas.Left="57" RenderTransformOrigin="1.899,0.488">Monster Health</TextBlock>
+            <TextBlock Name="EncounterText" Visibility="Hidden" Background="White"  Canvas.Left="142" Canvas.Top="273" Width="232"></TextBlock>
             <Button Name="NextAreaButton" Visibility="Hidden" Height="30" Width="70" Margin="0,289,447,0" Click="NextAreaButton_Click">Next Area</Button>
             <Button Name="SearchButton" Height="30" Width="73" Margin="69,289,375,0" Click="SearchButton_Click">Search</Button>
             <Button Name="ShopButton" Height="30" Width="75" Margin="142,289,300,0">Shop</Button>
             <Button Name="AttackButton" Visibility="Hidden" Height="30" Width="75" Margin="217,289,225,0" Click="AttackButton_Click">Attack</Button>
-            <Button Name="DefendButton" Visibility="Visible"  Height="30" Width="75" Margin="292,289,150,0" Click="DefendButton_Click">Defend</Button>
+            <Button Name="DefendButton" Visibility="Hidden"  Height="30" Width="75" Margin="292,289,150,0" Click="DefendButton_Click">Defend</Button>
             <Button Name="ItemsButton" Height="30" Width="75" Canvas.Left="367" Canvas.Top="289">Items</Button>
         </Canvas>
     </Grid>

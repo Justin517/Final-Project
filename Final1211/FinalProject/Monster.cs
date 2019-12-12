@@ -30,6 +30,9 @@ namespace FinalProject
         {
             player.PlayerHealth -= Damage;
         }
-
+        public void MonsterAttackWDefend(ref Player player)
+        {
+            player.PlayerHealth -= 2;
+        }
     }
 }

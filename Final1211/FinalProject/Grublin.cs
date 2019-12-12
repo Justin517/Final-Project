@@ -8,7 +8,7 @@ namespace FinalProject
 {
     class Grublin : Monster
     {
-
+        
 
         public Grublin(int health, bool hasweapon, int damage)
         {

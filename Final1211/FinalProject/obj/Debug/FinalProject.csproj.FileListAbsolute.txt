@@ -12,3 +12,17 @@ c:\users\user1\documents\visual studio 2015\Projects\FinalProject\FinalProject\o
 c:\users\user1\documents\visual studio 2015\Projects\FinalProject\FinalProject\obj\Debug\FinalProject.exe
 c:\users\user1\documents\visual studio 2015\Projects\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
 c:\users\user1\documents\visual studio 2015\Projects\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\MainWindow.g.cs
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\App.g.cs
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject_MarkupCompile.cache
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject_MarkupCompile.lref
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\MainWindow.baml
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject.g.resources
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
+C:\Users\justi\Source\Repos\Final-Project\Final1211\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.Cache

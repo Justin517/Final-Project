@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Timers;
+using System.Threading;
 
 namespace FinalProject
 {
@@ -37,7 +37,7 @@ namespace FinalProject
         {
             AttackButton.Visibility = Visibility.Hidden;
             DefendButton.Visibility = Visibility.Hidden;
-            if (grublin.Health > 0)
+            if (Area1.Visibility == Visibility.Visible && grublin.Health > 0)
             {
                 NextAreaButton.Visibility = Visibility.Hidden;
             }
@@ -57,12 +57,16 @@ namespace FinalProject
             AttackButton.Visibility = Visibility.Visible;
             DefendButton.Visibility = Visibility.Visible;
             EncounterText.Visibility = Visibility.Visible;
-            EncounterText = "You encountered a monster!";
+            EncounterText.Text = "You Encountered a Monster!";
+            PlayerHealthText.Visibility = Visibility.Visible;
+            PlayerHealthText.Text = Convert.ToString(player.PlayerHealth);
+         
             if (Area1.Visibility == Visibility.Visible)
             {
                 Area1.Visibility = Visibility.Hidden;
                 GrublinPic.Visibility = Visibility.Visible;
-
+                MonsterHealth.Text = Convert.ToString(grublin.Health);
+                MonsterHealth.Visibility = Visibility.Visible;
 
             }
 
@@ -70,28 +74,59 @@ namespace FinalProject
         }
         private void AttackButton_Click(object sender, RoutedEventArgs e)
         {
+            EncounterText.Visibility = Visibility.Hidden;
             player.Attack(ref grublin);
             AttackButton.Visibility = Visibility.Hidden;
-            if (grublin.Health > 0)
+ 
+            if (GrublinPic.Visibility == Visibility.Visible)
             {
-                grublin.MonsterAttack(ref player);
-            }
-            else if (grublin.Health <= 0)
-            {
-                GrublinPic.Visibility = Visibility.Hidden;
-                Area1.Visibility = Visibility.Visible;
-                ShopButton.Visibility = Visibility.Visible;
-                ItemsButton.Visibility = Visibility.Visible;
-                AttackButton.Visibility = Visibility.Hidden;
-                DefendButton.Visibility = Visibility.Hidden;
-                NextAreaButton.Visibility = Visibility.Visible;
-                SearchButton.Visibility = Visibility.Hidden;
+                MonsterHealth.Text = Convert.ToString(grublin.Health);
+                if (grublin.Health > 0)
+                {
+                    Thread.Sleep(2000);
+                    grublin.MonsterAttack(ref player);
+                    PlayerHealthText.Text = Convert.ToString(player.PlayerHealth);
+                    AttackButton.Visibility = Visibility.Visible;
+                }
+                else if (grublin.Health <= 0)
+                {
+                    GrublinPic.Visibility = Visibility.Hidden;
+
+                    ShopButton.Visibility = Visibility.Visible;
+                    ItemsButton.Visibility = Visibility.Visible;
+                    AttackButton.Visibility = Visibility.Hidden;
+                    DefendButton.Visibility = Visibility.Hidden;
+                    NextAreaButton.Visibility = Visibility.Visible;
+                    SearchButton.Visibility = Visibility.Hidden;
+                    MonsterHealth.Visibility = Visibility.Hidden;
+                    PlayerHealthText.Visibility = Visibility.Hidden;
+                    ItemGrabbed.Text = "You got a standard Sword";
+                    ItemGrabbed.Visibility = Visibility.Visible;
+                    MainCanvas.BackgroundColor = ConsoleColor.Black;
+                    ContinueButton.Visibility = Visibility.Visible;
+
+                }
             }
         }
-
         private void DefendButton_Click(object sender, RoutedEventArgs e)
         {
-            grublin.Damage = 0;
+            Thread.Sleep(2000);
+
+            if (GrublinPic.Visibility == Visibility.Visible && grublin.Health > 0)
+            {
+                EncounterText.Visibility = Visibility.Hidden;
+                grublin.MonsterAttackWDefend(ref player);
+                PlayerHealthText.Text = Convert.ToString(player.PlayerHealth);
+                PlayerHealthText.Text = Convert.ToString(player.PlayerHealth);                
+            }
+
+        }
+
+        private void ContinueButton_Click(object sender, RoutedEventArgs e)
+        {  
+             ItemGrabbed.Visibility = Visibility.Hidden;
+             Area1.Visibility = Visibility.Visible;
+            ContinueButton.Visibility = Visibility.Hidden;
         }
     }
 }
