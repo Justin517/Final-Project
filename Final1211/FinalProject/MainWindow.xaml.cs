@@ -102,7 +102,6 @@ namespace FinalProject
                     PlayerHealthText.Visibility = Visibility.Hidden;
                     ItemGrabbed.Text = "You got a standard Sword";
                     ItemGrabbed.Visibility = Visibility.Visible;
-                    MainCanvas.BackgroundColor = ConsoleColor.Black;
                     ContinueButton.Visibility = Visibility.Visible;
 
                 }

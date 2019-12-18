@@ -20,7 +20,9 @@
                     <BitmapImage UriSource="/Images/Grublinpic.jpg"></BitmapImage>
                 </Image.Source>
             </Image>
-            <Button Name="ContinueButton"  Visibility="Hidden" Width="525" Height="289" Background="Transparent" Foreground="White" Click="ContinueButton_Click">Click The Screen</Button>
+
+
+            <Button Name="ContinueButton"  Visibility="Hidden" Width="525" Height="103" Background="black" Foreground="White" Click="ContinueButton_Click" Canvas.Top="186">Click The Screen to Continue</Button>
             <TextBlock Name="ItemGrabbed"  Visibility="Hidden" Background="White" Width="232" Canvas.Left="142" Canvas.Top="40" Height="30"></TextBlock>
             <TextBlock Name="PlayerHealthText" Visibility="Hidden" Background="White" Width="85" Canvas.Left="57" Canvas.Top="273" Height="16">PlayerHealth</TextBlock>
             <TextBlock Name="MonsterHealth" Visibility="Hidden" Background="White" Height="50" Width="85" Canvas.Left="57" RenderTransformOrigin="1.899,0.488">Monster Health</TextBlock>
